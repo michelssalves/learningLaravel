@@ -6,29 +6,26 @@
     <title>Bem Vindo</title>
 </head>
 <body>
-    @foreach ($lista as $nomes)
-    <p>
-        {{$nomes}} - 
-        @component('components.botao')
-        @slot('href')
-            http://google.com.br
-        @endslot
-        @slot('cor')
-            blue
-        @endslot
-        Editar
-        @endcomponent
-        @component('components.botao')
-        @slot('href')
-            http://9gag.com
-        @endslot
-        @slot('cor')
-            red
-        @endslot
-        Deletar
-        @endcomponent
-    </p>
-    @endforeach
+    <div style="display: flex;
+    flex-direction:row">
+    @foreach ($pessoas as $p)
+        @component('components.card')
 
+            @slot('imagem')
+                {{$p['imagem']}}
+            @endslot
+            @slot('nome')
+                {{$p['nome']}}
+            @endslot
+            @slot('birth')
+                {{$p['birth']}}
+            @endslot
+            @slot('age')
+                {{$p['age']}}
+            @endslot
+        
+        @endcomponent
+    @endforeach
+    </div>
 </body>
 </html>
