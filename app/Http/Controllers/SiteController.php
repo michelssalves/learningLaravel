@@ -9,22 +9,33 @@ class SiteController extends Controller
     //
     public function index(){
 
-        $nome = 'Michel';
-        $sobrenome = 'Alves';
-        $nascimento = '11-07-1993';
-        $idade = 30;
 
-        $data =  [
-            'lista' => [
-                '1' => 'Michel', 
-                '2' => 'Mayumi',   
-                '3' => 'Rafaele',              ]
-            
+        $pessoas = [
+            [          
+                'imagem' => 'https://i.pravatar.cc/150?img='.rand(0,50), 
+                'nome' => 'Michel',   
+                'birth' => '11/07/1993', 
+                'age' => '30', 
+            ],
+                
+            [          
+                'imagem' => 'https://i.pravatar.cc/150?img='.rand(0,50), 
+                'nome' => 'Mayumi',   
+                'birth' => '01/07/1994', 
+                'age' => '29', 
+            ],
+            [          
+                'imagem' => 'https://i.pravatar.cc/150?img='.rand(0,50), 
+                'nome' => 'Rafaele',   
+                'birth' => '10/09/2019', 
+                'age' => '4', 
+            ],   
+               
         ];
         
-        return view('bemvindo', $data);
-
+        $dados['pessoas'] = $pessoas;
+    
+    return view('bemvindo', $dados);
     }
-
 
 }
