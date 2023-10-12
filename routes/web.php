@@ -15,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [SiteController::class, 'index']);
 Route::get('/ex2', [SiteController::class, 'ex2']);
-Route::get('/usuarios/{quantidade}', [SiteController::class, 'users']);
+Route::get('/principal', [SiteController::class, 'site']);
+Route::get('/principal2', [SiteController::class, 'site2']);

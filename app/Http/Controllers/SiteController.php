@@ -45,5 +45,11 @@ class SiteController extends Controller
 
         return view ('ex2',$dados);
     }
+    public function site(){
+        return view ('principal');
+    }
+    public function site2(){
+        return view ('principal2');
+    }
 
 }
