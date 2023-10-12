@@ -9,7 +9,7 @@
     <div style="display: flex;
     flex-direction:row">
     @foreach ($pessoas as $p)
-        @component('components.card')
+        {{-- @component('components.card')
 
             @slot('imagem')
                 {{$p['imagem']}}
@@ -22,9 +22,12 @@
             @endslot
             @slot('age')
                 {{$p['age']}}
-            @endslot
+            @endslot 
+         @endcomponent--}}
+
+            @include('components.card', $p)
         
-        @endcomponent
+       
     @endforeach
     </div>
 </body>
