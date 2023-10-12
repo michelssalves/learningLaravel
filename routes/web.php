@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 // |
 */
 Route::get('/', [SiteController::class, 'index']);
-Route::get('/sair', [SiteController::class, 'sair']);
+Route::get('/ex2', [SiteController::class, 'ex2']);
 Route::get('/usuarios/{quantidade}', [SiteController::class, 'users']);
